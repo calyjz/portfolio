@@ -1,13 +1,113 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Spartan and Open Sans fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@layer base {
+	body {
+		@apply font-lato;
+	}
+	h1 {
+		@apply font-playfair;
+		@apply text-6xl;
+		@apply font-bold;
+	}
+	h2 {
+		@apply font-lato;
+		@apply text-2xl;
+	}
+	h3 {
+		@apply font-playfair;
+		@apply font-bold;
+		@apply text-3xl;
+	}
+	h4 {
+		@apply font-playfair;
+		@apply font-bold;
+		@apply text-2xl;
+	}
+	p {
+		@apply font-lato;
+	}
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+	.App {
+		background-color: #F9F4F0;
+		min-height: 100vh;
+	}
+	.home-container {
+		margin-left: clamp(1rem, 10vw, 15rem);
+		margin-right: clamp(1rem, 10vw, 15rem);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		height: clamp(400px, 50vh, 700px);
+		gap: clamp(0rem, 4vw, 2rem);
+	}
+	#bio-container {
+		width: 60%;
+		max-width: 500px;
+		text-align: left;
+	}
+	#image-container {
+		height: 60%;
+	}
+	#headshot {
+		height: 100%;
+		width: auto;
+		object-fit: contain;
+	}
+
+	.experience-container {
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 1000px;
+		display: flex;
+		flex-direction: column;
+		justify-content: left;
+		align-self: center;
+	}
+	.experience-timeline {
+		margin-left: 15%;
+	}
+	.title-header {
+		align-self: self-start;
+	}
+}
+
+@media (max-width: 480px) {
+	/* general heading / paragraph reductions for iPhone widths */
+	h1 { @apply text-2xl; }
+	h2 { @apply text-base; }
+	h3 { @apply text-xl; }
+	h4 { @apply text-xl; }
+	p  { @apply text-sm; }
+
+	/* optional: adjust specific containers */
+	#bio-container {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	}
+
+	.experience-container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: left;
+		align-self: center;
+	}
+		.experience-timeline {
+		margin-left: 0;
+	}
+
+	.title-header {
+		align-self: self-start;
+		margin-left: 10%;
+	}
+
 }
