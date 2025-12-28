@@ -18,7 +18,8 @@ const Icons = {
 
 const DATA = {
   navbar: [
-    { href: "#", icon: HomeIcon, label: "Home" },
+    { href: "#home", icon: HomeIcon, label: "Home" },
+    { href: "#connect", icon: MailIcon, label: "Email" },
     // { href: "#", icon: PencilIcon, label: "Blog" },
   ],
   contact: {
@@ -33,14 +34,16 @@ const DATA = {
         url: "https://www.linkedin.com/in/calyzheng/",
         icon: Icons.linkedin,
       },
-      email: {
-        name: "Send Email",
-        url: "#", //TODO: button should redirect to contact at the bottom
-        icon: Icons.email,
-      },
     },
   },
 }
+
+const handleScrollToComponent = (e, divID) => {
+  e.preventDefault();
+  document.getElementById(divID)?.scrollIntoView({ 
+    behavior: 'smooth' 
+  });
+};
 
 const Navigation = () => {
   return (
@@ -51,7 +54,7 @@ const Navigation = () => {
             <DockIcon key={item.label}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <a href={item.url} aria-label={item.label} target="blank" className="flex items-center justify-center size-12">
+                  <a href={item.href} aria-label={item.label} target="blank" className="flex items-center justify-center size-12">
                     <item.icon className="w-6 h-6" />
                   </a>
                 </TooltipTrigger>

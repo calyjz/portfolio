@@ -2,7 +2,7 @@ import headshot from "../assets/headshot.png";
 
 const Home = () => {
     return (
-        <div className="home-container">
+        <div id="home" className="home-container">
             <div id="bio-container">
             <h1 className="mb-4">Caly Zheng</h1>
             <h2>Student software engineer with a passion in backend, cloud computing, and infrastructure.</h2>

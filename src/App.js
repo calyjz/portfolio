@@ -4,22 +4,22 @@ import './App.css';
 import Home from "./components/Home";
 import Experience from "./components/Experience";
 import Projects from './components/Projects';
+import Connect from './components/Connect';
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
-// Import React libraries
-import { HashRouter as Router } from "react-router-dom";
 
 function App() {
 
 	return (
-		<Router basename="/">
-			<div className='App'>
+		<div className='App'>
 			<Navigation />
-				<Home />
-				<Experience />
+			<Home />
+			<Experience />
 			<Projects />
-			</div>
-		</Router>
+			<Connect />
+			<Footer />
+		</div>
 	);
 }
 

@@ -4,7 +4,7 @@ const Projects = () => {
     return (
         <div className="projects-container">
             <div className="title-header">
-                <h3 className='mb-10'>━━ Projects</h3>
+                <h3>━━ Projects</h3>
             </div>
             
             <div className="project-cards-container">
@@ -39,7 +39,7 @@ const ProjectCard = ({ title, description, tags, image, link }) => {
             {image && <img src={process.env.PUBLIC_URL + image} alt={title} />}
         </div>
         {link && <a href={link} target="blank">
-            <button className="view-project-btn">View project</button>
+            <button>View project</button>
         </a>}
         
     </div>

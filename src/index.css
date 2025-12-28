@@ -28,15 +28,47 @@
 		@apply font-bold;
 		@apply text-2xl;
 	}
+	h5 {
+		@apply font-playfair;
+		@apply font-bold;
+		@apply text-xl;
+	}
 	p {
 		@apply font-lato;
 	}
+	input,
+	textarea {
+		@apply rounded-lg;
+		@apply w-full;
+		height: 45px;
+		margin-bottom: 1rem;
+		/* border-width: 2px; */
+		box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+
+	}
+	button {
+		background: #000;
+		color: white;
+		padding: 0.8rem 2rem;
+		border: none;
+		border-radius: 25px;
+		font-size: 0.9rem;
+		cursor: pointer;
+		transition: background 0.3s ease;
+	}
+	button.hover {
+		background: #333;
+	}
+	html {
+  	scroll-behavior: smooth;
+}
 }
 
 @layer components {
 	.App {
 		background: #F9F4F0;
 		min-height: 100vh;
+		padding-bottom: 1rem;
 	}
 	.dock-container {
 		position: fixed;
@@ -75,7 +107,6 @@
 	}
 
 	.experience-container {
-		width: 80%;
 		margin-left: auto;
 		margin-right: auto;
 		max-width: 1000px;
@@ -91,6 +122,8 @@
 	}
 	.title-header {
 		align-self: self-start;
+		margin-bottom: 1rem;
+		text-align: left;
 	}
 
 	.projects-container {
@@ -185,14 +218,17 @@
 		align-items: flex-start;
 		align-self: center;
 		z-index: 1;
+		margin-bottom: 5%;
+
 	}
 	.connect-form {
 		width: 80%;
 		border-radius: 30px;
 		background: rgba(255, 255, 255, 0.5);
+		box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: center;
 		justify-content: flex-start;
 		align-self: center;
 		text-align: left;
@@ -206,8 +242,9 @@
 	/* general heading / paragraph reductions for iPhone widths */
 	h1 { @apply text-2xl; }
 	h2 { @apply text-base; }
-	h3 { @apply text-xl; }
+	h3 { @apply text-2xl; }
 	h4 { @apply text-xl; }
+	h5 { @apply text-base; }
 	p  { @apply text-sm; }
 
 	/* optional: adjust specific containers */
@@ -223,13 +260,25 @@
 		justify-content: left;
 		align-self: center;
 	}
-		.experience-timeline {
+	.experience-timeline {
 		margin-left: 0;
+	}
+	.projects-container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: left;
+		align-self: center;
+	}
+	.project-cards-container {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.title-header {
 		align-self: self-start;
-		margin-left: 10%;
+		margin-left: 1rem;
 	}
 
 }

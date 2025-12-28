@@ -10,7 +10,7 @@ const Experience = () => {
     return (
         <div className="experience-container">
             <div className="title-header">
-                <h3 className='mb-10'>━━ Experience</h3>
+                <h3>━━ Experience</h3>
             </div>
 
             <div className='experience-timeline'>
