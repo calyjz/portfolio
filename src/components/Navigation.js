@@ -1,10 +1,9 @@
-import { Dock, DockIcon } from "./shadcn/Dock.tsx"
-
-import { HomeIcon, MailIcon } from "lucide-react"
+import { Dock, DockIcon } from "./shadcn/Dock.tsx";
+import { HomeIcon, MailIcon } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./shadcn/Tooltip.tsx"
-import { Separator } from "./shadcn/Separator.tsx"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./shadcn/Tooltip.tsx";
+import { Separator } from "./shadcn/Separator.tsx";
 
 const Icons = {
   email: (props) => <MailIcon {...props} />,
@@ -38,18 +37,11 @@ const DATA = {
   },
 }
 
-const handleScrollToComponent = (e, divID) => {
-  e.preventDefault();
-  document.getElementById(divID)?.scrollIntoView({ 
-    behavior: 'smooth' 
-  });
-};
-
 const Navigation = () => {
   return (
     <div className="dock-container">
       <TooltipProvider>
-        <Dock direction="middle" className="rounded-full shadow-xl backdrop-blur-md">
+        <Dock direction="middle" className="rounded-full shadow-xl">
           {DATA.navbar.map((item) => (
             <DockIcon key={item.label}>
               <Tooltip>
@@ -77,10 +69,10 @@ const Navigation = () => {
                   <p>{name}</p>
                 </TooltipContent>
               </Tooltip>
-            </DockIcon>
+              </DockIcon>
           ))}
-        </Dock>
-      </TooltipProvider>
+          </Dock>
+        </TooltipProvider>
     </div>
   )
 }

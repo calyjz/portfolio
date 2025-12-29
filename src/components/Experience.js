@@ -6,6 +6,8 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 
+import experience from '../static/experience.json';
+
 const Experience = () => {
     return (
         <div className="experience-container">
@@ -15,47 +17,22 @@ const Experience = () => {
 
             <div className='experience-timeline'>
                 <Timeline>
-                    <TimelineItem>
-                        <TimelineOppositeContent sx={{paddingLeft: 0, maxWidth:'150px'}}>
-                            <h4>May 2025</h4>
-                        </TimelineOppositeContent>
-                        <TimelineSeparator>
-                        <TimelineDot />
-                            <TimelineConnector sx={{ minHeight: '200px'}} />
-                        </TimelineSeparator>
-                        <TimelineContent>
-                            <h4>Amazon Web Services</h4>
-                            <p><b>Software Developer Intern</b></p>
-                            <p>Modernized db backup workflows for critical RDS databases</p>
+                    {experience && experience.map(({ company, start, title, description }) => 
+                        <TimelineItem>
+                            <TimelineOppositeContent sx={{paddingLeft: 0, maxWidth:'150px'}}>
+                                <h4>{start}</h4>
+                            </TimelineOppositeContent>
+                            <TimelineSeparator>
+                            <TimelineDot />
+                                <TimelineConnector sx={{ minHeight: '150px'}} />
+                            </TimelineSeparator>
+                            <TimelineContent>
+                                <h4>{company}</h4>
+                                <p><b>{title}</b></p>
+                                <p>{description}</p>
                             </TimelineContent>
-                    </TimelineItem>
-                    <TimelineItem>
-                        <TimelineOppositeContent sx={{paddingLeft: 0, maxWidth:'150px'}}>
-                            <h4>Sept 2024</h4>
-                        </TimelineOppositeContent>
-                        <TimelineSeparator>
-                        <TimelineDot />
-                        <TimelineConnector sx={{ minHeight: '200px'}} />
-                        </TimelineSeparator>
-                        <TimelineContent>
-                            <h4>Canadian Space Agency</h4>
-                            <p><b>Full-Stack Developer Intern</b></p>
-                            <p>Developed an internal booking system, synchronizing events with Microsoft Calendar</p>
-                        </TimelineContent>
-                    </TimelineItem>
-                    <TimelineItem>
-                        <TimelineOppositeContent sx={{paddingLeft: 0, maxWidth:'150px'}}>
-                            <h4>May 2024</h4>
-                        </TimelineOppositeContent>
-                        <TimelineSeparator>
-                        <TimelineDot />
-                        <TimelineConnector sx={{ minHeight: '200px'}} />
-                        </TimelineSeparator>
-                        <TimelineContent>
-                            <h4>Nanostics</h4>
-                            <p><b>Software Developer Intern</b></p>
-                        </TimelineContent>
-                    </TimelineItem>
+                        </TimelineItem>
+                    )}
                     </Timeline>
             </div>
         </div>

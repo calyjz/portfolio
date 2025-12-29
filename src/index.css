@@ -47,6 +47,7 @@
 
 	}
 	button {
+		@apply font-playfair;
 		background: #000;
 		color: white;
 		padding: 0.8rem 2rem;
@@ -55,10 +56,22 @@
 		font-size: 0.9rem;
 		cursor: pointer;
 		transition: background 0.3s ease;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
 	}
-	button.hover {
+	button:hover {
 		background: #333;
 	}
+	button:disabled {
+		opacity: 0.5;
+		background: #666;
+		transition: none;
+  	}
+  	button:disabled:hover {
+    	background: #666;
+  }
+
 	html {
   	scroll-behavior: smooth;
 }
@@ -169,7 +182,7 @@
 		flex-wrap: wrap;
 	}
 	.tag {
-		padding: 0.4rem 1rem;
+		padding: 0.4rem 0.6rem;
 		border: 1px solid #ddd;
 		border-radius: 20px;
 		font-size: 0.85rem;
@@ -279,6 +292,14 @@
 	.title-header {
 		align-self: self-start;
 		margin-left: 1rem;
+	}
+
+	.connect-container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: left;
+		align-self: center;
 	}
 
 }

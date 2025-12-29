@@ -38,9 +38,11 @@ const ProjectCard = ({ title, description, tags, image, link }) => {
         <div className="project-image">
             {image && <img src={process.env.PUBLIC_URL + image} alt={title} />}
         </div>
-        {link && <a href={link} target="blank">
-            <button>View project</button>
-        </a>}
+        {link ? (
+            <a href={link} target="blank"> <button>view project</button> </a>
+        ) : (
+            <button disabled>view project</button>
+        )}
         
     </div>
     )

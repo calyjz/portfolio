@@ -1,23 +1,38 @@
 [
     {
+        "title": "Map Reduce",
+        "description": "Built a MapReduce library in C utilizing POSIX threads and synchronization primitives.",
+        "tags": ["distributed systems", "POSIX", "C"],
+        "image": "/Projects/mapreduce.png",
+        "link": "https://github.com/calyjz/map-reduce"
+    },
+
+    {
+        "title": "Branch Predictor",
+        "description": "Built a perceptron branch predictor in RISC-V Assembly with binary instrumentation in RARS.",
+        "tags": ["CompArch", "ML", "assembly"],
+        "image": "/Projects/branchpredictor.png",
+        "link": "https://github.com/calyjz/perceptron-predictor"
+    },
+    {
+        "title": "Project R",
+        "description": "A roguelike game with fast-pased combat, replay driven progression, and a handcrafted story.",
+        "tags": ["unity", "game dev", "SDLC"],
+        "image": "/Projects/projectr.jpg",
+        "link": "https://github.com/calyjz/Project-R"
+    },
+    {
         "title": "Ada's Team Website",
-        "description": "The official website for a women in tech student group.",
+        "description": "The official website for a women in tech student group, built using React and TailwindCSS.",
         "tags": ["react", "web dev", "full stack"],
-        "image": "/Projects/adasteamimage.png",
+        "image": "/Projects/adasteam.png",
         "link": "https://github.com/adasdevelopers/adas-team-website"
     },
     {
         "title": "Syzygy Events",
         "description": "An Android event lottery app with QR code entry, role based access, real time updates, and waitlisting.",
-        "tags": ["android", "testing", "object oriented programming"],
-        "image": "/Projects/syzygyeventsimage.png",
+        "tags": ["android", "testing", "OOP"],
+        "image": "/Projects/syzygyevents.png",
         "link": ""
-    },
-    {
-        "title": "Project R",
-        "description": "A roguelike game with fast-pased combat, replay driven progression, and a handcrafted story.",
-        "tags": ["unity", "game development", "SDLC"],
-        "image": "/Projects/projectr.jpg",
-        "link": "https://github.com/calyjz/Project-R"
     }
 ]

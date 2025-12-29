@@ -42,7 +42,7 @@ function ContactForm() {
                 errors={state.errors}
               />
               
-            <button type="submit" className="mx-auto block" disabled={state.submitting}>Submit</button>
+            <button type="submit" disabled={state.submitting}>Submit</button>
         </form>
         </div>
   );
