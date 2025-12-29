@@ -1,6 +1,5 @@
 // For more help visit https://formspr.ee/react-help
 import { useForm, ValidationError } from '@formspree/react';
-import { Contact } from 'lucide-react';
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("xnjqpdgr");
