@@ -1,8 +1,14 @@
 [
     {
         "company": "Amazon Web Services",
+        "start": "May 2026",
+        "title": "Software Development Engineer Intern",
+        "description": "Incoming summer 2026"
+    },
+    {
+        "company": "Amazon Web Services",
         "start": "May 2025",
-        "title": "Software Developer Intern",
+        "title": "Software Development Engineer Intern",
         "description": "Modernized db backup workflows for critical RDS databases"
     },
     {
