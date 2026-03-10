@@ -1,5 +1,12 @@
 [
     {
+        "title": "HTTP Load Balancer",
+        "description": "A layer 7 load balancer in Go featuring weighted least connections routing, dynamic thread pool autoscaling, and real-time health checking.",
+        "tags": ["distributed systems", "Go", "concurrency", "HTTP"],
+        "image": "",
+        "link": "https://github.com/calyjz/load-balancer"
+    },
+    {
         "title": "Map Reduce",
         "description": "Built a MapReduce library in C utilizing POSIX threads and synchronization primitives.",
         "tags": ["distributed systems", "POSIX", "C"],
